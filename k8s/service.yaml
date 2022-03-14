@@ -8,4 +8,4 @@ spec:
     app: imageclassifier
   ports:
   - port: 80
-    targetport: 8501
+    targetPort: 8501

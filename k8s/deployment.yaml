@@ -5,7 +5,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: imageclassifier
   template:
     metadata:
@@ -13,7 +13,7 @@ spec:
         app: imageclassifier
     spec:
       containers:
-      -name: cv-app
-      image: gcr.io/pjanjanam/imgwebapp:v1
-      ports:
-      - containerPort: 8501
+      - name: cv-app
+        image: gcr.io/mlops-gke-beanleaf-classifier/imgwebapp:v1
+        ports:
+        - containerPort: 8501
