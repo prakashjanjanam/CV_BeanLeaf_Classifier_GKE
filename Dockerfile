@@ -13,4 +13,7 @@ RUN ls -la $APP_HOME/
 RUN pip install -r requirements.txt
 # Run the streamlit on container start-up
 #CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 SAGunicorns
-CMD ["streamlit", "run", "--server.enableCORS" "false", "imgwebapp.py"]
+#CMD ["streamlit", "run", "--server.enableCORS" "false", "imgwebapp.py"]
+ENTRYPOINT ["streamlit", "run"]
+
+CMD ["imgwebapp.py"]
